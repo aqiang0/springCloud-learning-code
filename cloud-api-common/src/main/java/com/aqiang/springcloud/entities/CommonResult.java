@@ -1,7 +1,13 @@
 package com.aqiang.springcloud.entities;
 
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class CommonResult<T> {
     private long state;
     private String msg;
@@ -10,12 +16,6 @@ public class CommonResult<T> {
     public CommonResult(long state, String msg) {
         this.state = state;
         this.msg = msg;
-    }
-
-    public CommonResult(long state, String msg, T data) {
-        this.state = state;
-        this.msg = msg;
-        this.data = data;
     }
 
     public long getState() {
